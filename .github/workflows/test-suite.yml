@@ -1,0 +1,28 @@
+---
+name: run-test-suite
+
+on: [push]
+
+jobs:
+  test-suite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout@scm
+        uses: actions/checkout@main
+
+      - name: setup@python
+        uses: actions/setup-python@main
+        with:
+          python-version: '3.10'
+
+      - name: setup@poetry
+        run: pip install poetry
+
+      - name: setup@venv
+        run: poetry install
+
+      - name: lint@poe
+        run: poetry run poe lint
+
+      - name: test@poe
+        run: poetry run poe test
