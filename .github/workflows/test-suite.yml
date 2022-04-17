@@ -24,5 +24,8 @@ jobs:
       - name: lint@poe
         run: poetry run poe lint
 
+      - name: typecheck@poe
+        run: poetry run poe typecheck
+
       - name: test@poe
         run: poetry run poe test
