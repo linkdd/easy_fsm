@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "easy_fsm"
-version = "0.1.0"
+version = "0.2.0"
 description = "Easy to implement Finite State Machines"
 authors = ["David Delassus <david.jose.delassus@gmail.com>"]
 license = "MIT"
